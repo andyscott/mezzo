@@ -37,7 +37,8 @@ lazy val `core` = module("core")
   .settings(crossVersionSharedSources)
   .settings(libraryDependencies ++= Seq(
     "org.typelevel"     %% "cats-core"     % V.cats,
-    "com.chuusai"       %% "shapeless"     % V.shapeless
+    "com.chuusai"       %% "shapeless"     % V.shapeless,
+    "org.scalacheck"    %% "scalacheck"    % "1.13.4" % "test"
   ))
 
 lazy val `http-akka` = module("http-akka")
